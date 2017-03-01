@@ -11,7 +11,7 @@ class Band extends Component {
     console.log('This props store is ' + this.props.store)
     this.props.store.dispatch({
       type: "DELETE_BAND",
-      payload: id
+      id: id
     })
   }
   render(){

@@ -8,7 +8,12 @@ export default function manageBand(state = {bands: []}, action){
       return Object.assign({}, state, {bands: bands});
     case "DELETE_BAND":
       var bands = [...state.bands];
-      bands.splice(action.payload, 1);
+      for (var i = 0; i < bands.length; i++) {
+        if (bands[i].id == action.id) {
+          bands.splice(i, 1);
+        }
+      }
+      console.log(bands.length)
       return Object.assign({}, state, {bands: bands});
     default:
       return state;
