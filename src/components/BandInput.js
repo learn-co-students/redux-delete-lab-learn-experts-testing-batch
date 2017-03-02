@@ -16,7 +16,7 @@ class BandInput extends Component {
   render(){
     return (<div>
       <form onSubmit={this.handleOnSubmit.bind(this)}>
-        <input type="text" onChange={this.handleOnChange.bind(this)}/>
+        <input type="text" onChange={this.handleOnChange.bind(this)} value={this.state.text}/>
         <input type="submit" />
       </form>
     </div>
